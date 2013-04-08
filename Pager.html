@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../Lib/jquery-1.9.1.js"></script>
+    <script src="../../UI/jquery-ui-1.10.2.custom/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.js"></script>
+    <link href="../../UI/jquery-ui-1.10.2.custom/jquery-ui-1.10.2.custom/css/ui-lightness/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
+    <script src="pager.js"></script>
+    <script>
+        $(function () {
+            $("#pager").pager().bind("pagerindexchanged", function (e, index) {
+                alert(index);
+            });
+        });
+    </script>
+    <style>
+        .itellu-pager {
+        }
+
+            .itellu-pager ul.pager-links {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                float: left;
+            }
+
+                .itellu-pager ul.pager-links li {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    float: left;
+                    margin: 0 2px;
+                    display: block;
+                    padding: 3px 5px;
+                    border: solid 1px #b6ff00;
+                    background: #eee;
+                    cursor: pointer;
+                }
+
+                    .itellu-pager ul.pager-links li.number-link {
+                        color: #00ff90;
+                    }
+                    .itellu-pager ul.pager-links li.disable {
+                        color: white;
+                        background: #eef;
+                        cursor:text;
+                    }
+                     .itellu-pager ul.pager-links li.active {
+                        color: #f00;
+                        background: white;
+                    }
+                    .itellu-pager ul.pager-links li span {
+                    }
+
+            .itellu-pager ul.pager-info {
+            }
+    </style>
+</head>
+<body>
+    <div id="pager" class="itellu-pager"></div>
+</body>
+</html>
